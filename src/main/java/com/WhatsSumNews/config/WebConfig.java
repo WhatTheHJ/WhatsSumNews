@@ -10,15 +10,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/{spring:\\w+}").setViewName("forward:/index.html");
-        registry.addViewController("/**/{spring:\\w+}").setViewName("forward:/index.html");
-        registry.addViewController("/{spring:\\w+}/**{spring:?!(\\.js|\\.css|\\.ico|\\.json)$}")
+    	 // 기본 경로("/")도 index.html로 연결
+        registry.addViewController("/").setViewName("forward:/index.html");
+        // nyt 경로는 제외하고 클라이언트 사이드 라우팅 적용
+        registry.addViewController("/{spring:^(?!nyt$).*}$").setViewName("forward:/index.html");
+//        registry.addViewController("/**/{spring:^(?!nyt$).*}$").setViewName("forward:/index.html");
+        registry.addViewController("/{spring:^(?!nyt$).*}/**{spring:?!(\\.js|\\.css|\\.ico|\\.json)$}")
                 .setViewName("forward:/index.html");
-    }
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**")
-                .addResourceLocations("classpath:/static/");
     }
 }
