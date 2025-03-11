@@ -1,0 +1,109 @@
+/* 전체 페이지를 위한 스타일 */
+.main-container {
+    height: 100vh;
+    /* height: calc(100vh - 160px); */
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 400px;
+    flex-grow: 1;  
+    /* padding-top: 80px; */
+    /* overflow: auto;  */
+    /* height: calc(100vh - 160px); 헤더와 푸터 공간을 제외한 높이로 설정 */
+    /* margin-bottom: 80px; */
+  }
+
+  /* 전체 페이지를 위한 스타일 */
+
+body {
+  justify-content: center;
+  /* height: 100%; */
+  width: 100%;
+    margin: 0;
+    /* margin-bottom: 100px; */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 200px;
+  }
+  
+
+  header {
+     height: 280px; 
+    width: 100%;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    /* z-index: 1000; 헤더가 다른 요소들 위에 보이게 설정 */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  /* 푸터 고정, 스크롤 시 보이지 않도록 */
+footer {
+  height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* 푸터가 다른 요소들 위에 보이게 설정 */
+  }
+
+  /* 왼쪽 섹션 */
+  .left-section {
+  
+    /* margin-left: 10px; */
+    padding: 10px 20px;
+    position: relative;
+    margin-bottom: 80px;
+  }
+  
+
+  .top-section {
+    text-align: center; 
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    left: 0px;
+    top: 250px;
+    position: absolute;
+  }
+
+  
+  /* 오른쪽 섹션 */
+  .right-section {
+    right: 0;
+    height: 80%;
+    width: 40%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 80px;
+  }
+  
+  /* 기사 컨테이너 */
+  .article-container {
+    position: relative;
+  border: 3px solid rgba(0, 0, 0, 0.36); /* 기본 테두리 설정 */
+  border-bottom: 20px solid grey; /* 상단 테두리만 두껍게 */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* 박스 그림자 */
+  padding: 2%;
+  background-color: white; /* 배경색을 명확히 설정 */
+  box-sizing: border-box; /* 패딩 포함한 크기 유지 */
+  }
+  
+  /* 이미지 스타일 */
+  .article-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
