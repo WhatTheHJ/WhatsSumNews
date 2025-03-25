@@ -1,3 +1,5 @@
+# What's Sum News!
+
 뉴욕타임즈(New York Times)의 Most Popular API를 이용해  
 **조회 수가 가장 높은 기사**를 **1일, 7일 단위로** 확인할 수 있는 웹 애플리케이션.
 
